@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
+/* Root Variables */
+:root {
+  --brand-color: #54E6AF;
+  --background-color: #2C344B;
+  --text-color: #ffffff;
+  --button-color: #121725;
+  --body-color: #C2CBE5;
+}
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: 'Chivo', sans-serif;
+}
+
+/* Background */
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18,23,37,1.0);
+  overflow-x: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.background::before {
+  content: "";
+  background-image: url(assets/mobile/image-host.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.05;
+}
+
+/* Element Styles */
+.background > * { position: relative; }
+
+.logo {
+  padding-top: 62px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, p, .podcasting-logos img{
+  opacity: 0.7;
+}
+
+h1 {
+  margin-top: 57px;
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+h1 strong {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: var(--text-color);
+}
+
+
+p {
+  margin: 16px 24px 33px 24px;
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--body-color);
+}
+
+.podcasting-logos {
+  width: 315px;
+  height: 17px;
+  margin: 0 auto;
+}
+
+.podcasting-logos img:hover {
+  opacity: 1.0;
+}
+
+.logo_logo--spotify {
+  width: 56px;
+  margin-right: 19px;
+}
+
+.logo_logo--apple {
+  width: 45px;
+  margin-right: 21px; 
+}
+
+.logo_logo--google {
+  width: 73px;
+  margin-right: 11px;
+}
+
+.logo_logo--pocket {
+  width: 77px;
+}
+
+
+input {
+  border: 0;
+  height: 46px;
+  margin: 48px 24px 16px 24px;
+  width: clamp(100px, 100%, 375px);
+  padding: 9px 32px;
+  background: var(--background-color);
+  border-radius: 28px;
+  font-family: Chivo;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+
+  color: var(--text-color);
+}
+
+
+
+button {
+  border: 0;
+  height: 46px;
+  margin: 0 24px 0 -169px;
+  width: clamp(100px, 100%, 375px);
+  background: var(--brand-color);
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+  border-radius: 28px;
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.05px;
+  color: var(--button-color);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #B3FFE2;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: rgba(18,23,37,1.0);
+  }
+
+  .error {
+    color: #ad0303;
+    text-align: center;
+    opacity: 0;
+    margin-top: -15px;
+    margin-right: 400px;
+  }
+
+  button {
+    position: static !important;
+
+  }
+
+  .background {
+    display: block;
+    background: url(assets/tablet/image-host.jpg) top right no-repeat,
+    url(assets/desktop/bg-pattern-dots.svg) bottom left 30px no-repeat,
+    rgba(18,23,37,1.0);
+    padding-left: 39px;
+  }
+
+  .background::before {
+    background-image: none;
+  }
+
+  .logo {
+    padding-top: 50px;
+    margin: 0 0 152px 0;
+  }
+
+  h1 {
+    opacity: 0.95;
+  }
+
+  p {
+    opacity: 0.8;
+  }
+
+ 
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 635px;
+    height: 510px;
+    background-color: rgba(18,23,37,1.0);
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-top: 93px;
+    margin-bottom: 31px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+    margin: 0;
+    max-width: 445px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+ 
+  input {
+    margin: 40px 0;
+    width: 427px;
+    height: 56px;
+  }
+
+  button {
+    width: 162px;
+    height: 46px;
+  }
+
+  .podcasting-logos {
+    order: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 536px;
+    height: 29px;
+    margin: 22px 0;
+  }
+  .logo_logo--spotify {
+    width: 96px;
+    height: 29px;
+    margin-right: 0;
+  }
+
+  .logo_logo--apple {
+    width: 78px;
+    height: 29px;
+    margin-right: 0;
+  }
+  
+  .logo_logo--google {
+    width: 125px;
+    height: 18px;
+    margin-right: 0;
+  }
+  
+  .logo_logo--pocket {
+    width: 129px;
+    height: 26px;
+  }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+
+  .background {
+    display: block;
+    background: url(assets/desktop/bg-pattern-dots.svg) top 715px right no-repeat,
+    url(assets/desktop/image-host.jpg) top 127px right no-repeat,
+  rgba(18,23,37,1.0);
+    padding-left: 165px;
+  }
+
+  .error {
+    color: #ad0303;
+    text-align: center;
+    margin-right: 485px;
+    opacity: 0;
+    margin-top: -15px;
+  
+  }
+  .logo {
+    padding-top: 102px;
+    margin: 0 0 103px 0;
+  }
+
+  .content {
+    width: 723px;
+    height: 509px;
+  }
+  h1 {
+    padding-top: 88px;
+    margin-bottom: 24px;
+    font-size: 52px;
+    line-height: 62px;
+  }
+
+  .logo_logo--spotify {
+    margin-right: 6px;
+  }
+}
+
+
+@media screen and (max-width: 667px) {
+
+  input {
+    margin: 48px 24px 16px 2px;
+  }
+
+  button {
+    margin: 0 24px 0 2px;
+  }
+
+  .dincho {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .error {
+    color: #ad0303;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+}
